@@ -18,6 +18,6 @@
     }
   },
   "forwardPorts": [3000],
-  "postCreateCommand": "bash -c 'set -x && npm install",
+  "postCreateCommand": "bash -c 'set -x && npm install'",
   "shutdownAction": "none"
 }
