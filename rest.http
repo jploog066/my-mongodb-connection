@@ -1,5 +1,5 @@
-@database = myDatabase
-@collection = myCollection
+@database = BigBoxStore
+@collection = GroceryInventory
 @domain = http://localhost
 @port = 3000
 ###
@@ -12,12 +12,15 @@ Content-Type: application/json
 
 {
   "document": {
-    "name": "Jane",
-    "age": 30
+    "item": "butter",
+    "food_group": "dairy",
+    "price_in_usd": 4,
+    "quantity": 150,
+    "calories_per_100g": 120
   }
 }
 
 ###
-@id = 672189198b014f93b77159c5
+@id = 6723eff8516023421a145700
 DELETE {{domain}}:{{port}}/delete/{{database}}/{{collection}}/{{id}}
 Content-Type: application/json
