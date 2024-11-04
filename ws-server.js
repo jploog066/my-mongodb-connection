@@ -59,3 +59,55 @@ app.get("/find/:database/:collection", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
+app.post("/insert/:database/:collection", async (req, res) => {
+    try {
+        const { database, collection } = req.params;
+        const db = client.db(database);
+
+        // check if single or multiple documents
+        if (req.body.document) {
+            // single document insert
+            const result = await db.collection(collection).insertOne(req.body.document);
+            res.status(201).json({
+                message: "Document inserted successfully",
+                insertedId: result.insertedId
+            })
+        }
+        else if (req.body.documents && Array.isArray(req.body.documents)) {
+            // multiple documents insert
+            const result = await db.collection(collection).insertMany(req.body.documents);
+            res.status(201).json({
+                message: `${result.insertedCount} documents inserted`,
+                insertedIds: result.insertedIds
+            })
+        }
+        else {
+            res.status(400).json({
+                error: "Request body must contain either 'document' or 'documents' as array"
+            })
+        }
+
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+async function startServer() {
+    try {
+        await client.connect();
+        console.log("Connected to MongoDB");
+
+        // Connect to the REPL's WebSocket server
+        connectToREPL();
+
+        app.listen(port, () => {
+            console.log(`Server running at http://localhost:${port}`);
+        });
+    } catch (err) {
+        console.error("Error connecting to MongoDB:", err);
+        process.exit(1); // Exit the process if the connection fails
+    }
+}
+
+startServer();

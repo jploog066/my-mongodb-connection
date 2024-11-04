@@ -1,6 +1,121 @@
 [
-  { "_id": "67203ec7bdfd8b1981b80432", "name": "John", "age": 30 },
-  { "_id": "67204bec8b1a960a6e699435", "name": "John", "age": 30 },
-  { "_id": "67204f388b1a960a6e699436", "name": "John", "age": 30 },
-  { "_id": "67204f448b1a960a6e699437", "name": "John", "age": 30 }
+  {
+    "_id": "6723f0cd516023421a145701",
+    "item": "apple",
+    "food_group": "fruits",
+    "price_in_usd": 0.3,
+    "quantity": 100,
+    "calories_per_100g": 52
+  },
+  {
+    "_id": "6723f16f516023421a145702",
+    "item": "broccoli",
+    "food_group": "vegetables",
+    "price_in_usd": 1.1,
+    "quantity": 50,
+    "calories_per_100g": 34,
+    "organic": true
+  },
+  {
+    "_id": "6723f17e516023421a145703",
+    "item": "salmon",
+    "food_group": "proteins",
+    "price_in_usd": 8.5,
+    "quantity": 20,
+    "calories_per_100g": 208,
+    "wild_caught": true
+  },
+  {
+    "_id": "6723f18d516023421a145704",
+    "item": "almonds",
+    "food_group": "nuts",
+    "price_in_usd": 12,
+    "quantity": 10,
+    "calories_per_100g": 579,
+    "organic": false
+  },
+  {
+    "_id": "6723f1a2516023421a145705",
+    "item": "milk",
+    "food_group": "dairy",
+    "price_in_usd": 2,
+    "quantity": 60,
+    "calories_per_100ml": 42,
+    "fat_content": "2%"
+  },
+  {
+    "_id": "6723f1b4516023421a145706",
+    "item": "bread",
+    "food_group": "grains",
+    "price_in_usd": 1.5,
+    "quantity": 40,
+    "calories_per_slice": 80,
+    "gluten_free": false
+  },
+  {
+    "_id": "6723f1c5516023421a145707",
+    "item": "chicken breast",
+    "food_group": "proteins",
+    "price_in_usd": 5,
+    "quantity": 25,
+    "calories_per_100g": 165,
+    "free_range": true
+  },
+  {
+    "_id": "6723f1d9516023421a145708",
+    "item": "yogurt",
+    "food_group": "dairy",
+    "price_in_usd": 0.9,
+    "quantity": 80,
+    "calories_per_100g": 59,
+    "fat_content": "0%"
+  },
+  {
+    "_id": "6723f1e5516023421a145709",
+    "item": "banana",
+    "food_group": "fruits",
+    "price_in_usd": 0.2,
+    "quantity": 150,
+    "calories_per_100g": 96
+  },
+  {
+    "_id": "6723f231516023421a14570a",
+    "item": "candy",
+    "food_group": "sweets",
+    "price_in_usd": 2.2,
+    "quantity": 150,
+    "calories_per_100g": 96
+  },
+  {
+    "_id": "6723f25c516023421a14570b",
+    "item": "cod",
+    "food_group": "proteins",
+    "price_in_usd": 10.2,
+    "quantity": 150,
+    "calories_per_100g": 200
+  },
+  {
+    "_id": "6723f27b516023421a14570c",
+    "item": "ketchup",
+    "food_group": "sauce",
+    "price_in_usd": 5.2,
+    "quantity": 150,
+    "calories_per_100g": 50
+  },
+  {
+    "_id": "6723f290516023421a14570d",
+    "item": "dr pepper",
+    "food_group": "soda",
+    "price_in_usd": 12.2,
+    "quantity": 150,
+    "calories_per_100g": 300
+  },
+  {
+    "_id": "6723f2c3516023421a14570e",
+    "item": "butter",
+    "food_group": "dairy",
+    "price_in_usd": 4,
+    "quantity": 150,
+    "calories_per_100g": 120
+  }
 ]
