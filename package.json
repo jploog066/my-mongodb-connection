@@ -4,7 +4,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "concurrently -n \"REPL,WS\" -c \"blue,green\" -k -r \"nodemon --watch . replSetup.js\" \"nodemon --watch . ws-server.js\" --handle-input",
+    "ws": "nodemon --watch . ws-server.js",
+    "repl": "nodemon --watch . replSetup.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,11 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "mongodb": "^6.10.0"
+    "mongodb": "^6.10.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7"
   }
 }

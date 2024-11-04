@@ -1,0 +1,6 @@
+{
+  "watch": ["ws-server.js", "replSetup.js", "routes/", "controllers/"],
+  "ignore": ["node_modules/", "public/"],
+  "ext": "js,json",
+  "delay": "1000"
+}
